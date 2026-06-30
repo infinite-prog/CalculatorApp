@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Designed the front_end and then asked AI to make it look better-->
+<!-- makes dark background with #1C1C1E-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1C1C1E"
+    android:padding="16dp">
+
+    <!--makes the number big with height=0dp and weight=2dp-->
+    <!--gravity takes the text to the bottom right corner-->
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="0"
+        android:textSize="64sp"
+        android:textColor="#FFFFFF"
+        android:gravity="bottom|end"
+        android:paddingBottom="16dp"
+        android:paddingEnd="16dp"/>
+
+
+    <EditText
+        android:id="@+id/numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3A3A3C"
+        android:padding="12dp"
+        android:hint="Enter number"
+        android:textColorHint="#8E8E93"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Row 1: + and - -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="+"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF9F0A"
+            android:onClick="onAdd"/>
+
+        <Button
+            android:id="@+id/sub"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="−"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF9F0A"
+            android:onClick="onSub"/>
+    </LinearLayout>
+
+    <!-- Row 2: * and / -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/multiply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="×"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF9F0A"
+            android:onClick="onMultiply"/>
+
+        <Button
+            android:id="@+id/division"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="÷"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF9F0A"
+            android:onClick="onDivide"/>
+    </LinearLayout>
+
+    <!-- Row 3: % and = -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/modulus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="%"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2C2C2E"
+            android:onClick="onMod"/>
+
+        <Button
+            android:id="@+id/equals"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="="
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#30D158"
+            android:onClick="onEqual"/>
+    </LinearLayout>
+
+</LinearLayout>
